@@ -30,6 +30,8 @@ goconvey:
 	$$GOPATH/bin/goconvey -port=9999
 
 godep:
+	@echo "Install godep..."
+	@go get github.com/tools/godep
 	@echo "Restoring dependencies..."
 	@godep restore
 
