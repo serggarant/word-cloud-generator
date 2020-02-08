@@ -8,9 +8,9 @@ import (
 	"log"
 	"net/http"
 
+	"./wordyapi"
 	rice "github.com/GeertJohan/go.rice"
 	mux "github.com/gorilla/mux"
-	"./wordyapi"
 )
 
 // TextSubmission is a json title and string to submit

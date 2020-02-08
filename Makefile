@@ -21,6 +21,7 @@ start-mac: build
 	./artifacts/osx/word-cloud-generator
 
 rice:
+	@go get github.com/GeertJohan/go.rice/rice
 	@rice embed-go
 
 goconvey-install:
