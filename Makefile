@@ -3,16 +3,16 @@ BINARY=word-cloud-generator
 all: clean godep test build
 
 lint: vet fmt
-	@golint $$(go list ./...|grep -v vendor)
+	@golint
 
 vet:
-	@go vet $$(go list ./...|grep -v vendor)
+	@go vet
 
 fmt:
-	@go fmt $$(go list ./...|grep -v vendor)
+	@go fmt
 
 test:
-	@go test $$(go list ./...|grep -v vendor)
+	@go test
 
 run:
 	@go run main.go
