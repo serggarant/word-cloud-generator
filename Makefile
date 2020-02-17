@@ -32,9 +32,9 @@ goconvey:
 
 godep:
 	@echo "Install godep..."
-	@go get github.com/tools/godep
+	go get github.com/tools/godep
 	@echo "Restoring dependencies..."
-	@godep restore
+	godep restore
 
 build:
 	@echo "Creating compiled builds in ./artifacts"
