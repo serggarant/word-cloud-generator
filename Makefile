@@ -3,6 +3,7 @@ BINARY=word-cloud-generator
 all: clean godep test build
 
 lint: vet fmt
+	@go get -u golang.org/x/lint/golint
 	@golint
 
 vet:
@@ -32,9 +33,9 @@ goconvey:
 
 godep:
 	@echo "Install godep..."
-	go get github.com/tools/godep
+	@go get github.com/tools/godep
 	@echo "Restoring dependencies..."
-	godep restore
+	@godep restore
 
 build:
 	@echo "Creating compiled builds in ./artifacts"
