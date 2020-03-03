@@ -3,14 +3,6 @@ pipeline {
         dockerfile true
     }
     stages {
-        stage('Download source') {
-            steps {
-                git url: 'https://github.com/L-Eugene/word-cloud-generator.git'
-                
-                sh 'ls -l'
-                sh 'pwd'
-            }
-        }
         stage('Build application'){
             environment {
                 GOPATH = "${WORKSPACE}"
@@ -19,7 +11,6 @@ pipeline {
             }
 
             steps {
-                sh 'echo $GOPATH'
                 sh 'make'
             }
         }
