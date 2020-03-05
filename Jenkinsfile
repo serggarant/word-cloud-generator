@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        dockerfile true
+        dockerfile {
+            additionalBuildArgs '-t imagess'
+        }
     }
     stages {
         stage('Build application'){
