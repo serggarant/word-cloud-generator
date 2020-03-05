@@ -2,7 +2,7 @@ pipeline {
     agent {
         dockerfile {
             additionalBuildArgs '-t imagess'
-            customWorkspace '/tmp/'
+            customWorkspace '/tmp/workspace/'
         }
     }
     stages {
