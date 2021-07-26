@@ -66,7 +66,7 @@ sleep 5
 					steps {
 					sh '''res=`curl -s -H "Content-Type: application/json" -d '{"text":"test"}' http://127.0.0.1:8888/version | jq '. | length'`
 if [ "1" != "$res" ]; then exit 99; fi
-res=`curl -s -H "Content-Type: application/json" -d '{"text":"test"}' http://127.0.0.1:8888/api | jq '. | length'`
+res=`curl -s -H "Content-Type: application/json" -d '{"text":"ths is a really really really important thing this is"}' http://127.0.0.1:8888/api | jq '. | length'`
 if [ "7" != "$res" ]; then exit 99; fi
 '''
 					}
